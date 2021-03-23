@@ -1,6 +1,0 @@
-server:
-  port : 8081
-testUser:
-  name : mickey-mouse
-  age : 22
-  pin : 400081
