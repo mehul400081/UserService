@@ -1,0 +1,13 @@
+sudo docker build -t mehul400081/user:1.0 .
+sudo docker run -p 8089:8085 mehul400081/user:1.0
+git config --global user.name /mehul400081/
+git config --global user.email /mehul.bhatt2004@gmail.com/
+sudo docker push mehul400081/user:1.0
+sudo minikube kubectl describe service user-svc
+sudo minikube kubectl -- apply -f ./deployment.yml
+sudo minikube kubectl delete service user-svc
+sudo minikube kubectl delete pod user-pod
+sudo minikube service user-svc
+sudo minikube kubectl get pods
+sudo minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus 1
+sudo minikube kubectl -- apply -f ./configMap.yml
