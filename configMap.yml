@@ -5,6 +5,7 @@ metadata:
 data:
   application.properties: |-
     server.port=8085
+    testUser.name=scoobyDoo
     testUser.age=26
     testUser.pin=400089
     logging.level.org.springframework.web=DEBUG
