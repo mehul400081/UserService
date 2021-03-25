@@ -11,3 +11,5 @@ sudo minikube service user-svc
 sudo minikube kubectl get pods
 sudo minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus 1
 sudo minikube kubectl -- apply -f ./configMap.yml
+sudo minikube kubectl rollout restart deployment user-deployment
+sudo minikube kubectl logs user-deployment-5c4c6d57d5-wh8r5
