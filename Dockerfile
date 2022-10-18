@@ -1,3 +1,5 @@
 FROM openjdk:11
-COPY /home/runner/work/UserService/UserService/target/user-0.0.1-SNAPSHOT.jar user.jar
-ENTRYPOINT ["java","-jar","/user.jar"]
+RUN mkdir target
+ARG JAR_FILE=./target/*.jar
+COPY ${JAR_FILE} target/user.jar
+ENTRYPOINT ["java","-jar","/target/app.jar"]
